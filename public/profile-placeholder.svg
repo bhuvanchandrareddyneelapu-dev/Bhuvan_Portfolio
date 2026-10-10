@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%" fill="none">
+  <rect width="400" height="400" fill="#0d121a"/>
+  
+  <!-- Subtle technical grid -->
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#162030" stroke-width="0.8"/>
+    </pattern>
+    <radialGradient id="avatarGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  
+  <rect width="400" height="400" fill="url(#grid)"/>
+  <circle cx="200" cy="200" r="160" fill="url(#avatarGlow)"/>
+
+  <!-- Technical border frame & corner crosshairs -->
+  <rect x="20" y="20" width="360" height="360" rx="8" stroke="#1f2d42" stroke-width="1.5" stroke-dasharray="8 4"/>
+  <path d="M 12 28 L 28 28 M 28 12 L 28 28" stroke="#10b981" stroke-width="2"/>
+  <path d="M 388 28 L 372 28 M 372 12 L 372 28" stroke="#10b981" stroke-width="2"/>
+  <path d="M 12 372 L 28 372 M 28 388 L 28 372" stroke="#10b981" stroke-width="2"/>
+  <path d="M 388 372 L 372 372 M 372 388 L 372 372" stroke="#10b981" stroke-width="2"/>
+
+  <!-- Studio Coordinate & Metadata tags -->
+  <text x="32" y="44" fill="#64748b" font-family="monospace" font-size="10" letter-spacing="1">STUDIO // SPEC: 400x400</text>
+  <text x="260" y="44" fill="#10b981" font-family="monospace" font-size="10" letter-spacing="1">PHOTO_SLOT.RAW</text>
+
+  <!-- Technical Silhouette / Monogram -->
+  <circle cx="200" cy="155" r="54" stroke="#334155" stroke-width="2" stroke-dasharray="4 2" fill="#111827"/>
+  <path d="M 115 305 C 115 235 285 235 285 305" stroke="#334155" stroke-width="2" fill="#111827"/>
+  
+  <!-- Measurement crosshair -->
+  <circle cx="200" cy="170" r="95" stroke="#10b981" stroke-opacity="0.3" stroke-width="1"/>
+  <line x1="80" y1="200" x2="320" y2="200" stroke="#1e293b" stroke-width="1"/>
+  <line x1="200" y1="60" x2="200" y2="340" stroke="#1e293b" stroke-width="1"/>
+  <polygon points="200,140 215,160 200,180 185,160" stroke="#10b981" stroke-width="1.5" fill="none"/>
+  <circle cx="200" cy="160" r="3" fill="#10b981"/>
+
+  <!-- Central prompt -->
+  <rect x="90" y="325" width="220" height="30" rx="4" fill="#0b0f14" stroke="#1e293b" stroke-width="1"/>
+  <text x="200" y="344" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="11" font-weight="600" letter-spacing="1">[YOUR_PHOTO_PATH]</text>
+  <text x="200" y="375" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="9">REPLACE WITH /public/profile.jpg</text>
+</svg>

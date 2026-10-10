@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%" fill="none">
+  <rect width="800" height="450" fill="#0b1017"/>
+  
+  <defs>
+    <pattern id="projGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#141c28" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="headerGrad" x1="0" y1="0" x2="800" y2="0">
+      <stop offset="0%" stop-color="#111926"/>
+      <stop offset="100%" stop-color="#0b1017"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="800" height="450" fill="url(#projGrid)"/>
+  
+  <!-- Studio Window Header -->
+  <rect x="0" y="0" width="800" height="38" fill="url(#headerGrad)"/>
+  <line x1="0" y1="38" x2="800" y2="38" stroke="#1e2a3c" stroke-width="1.5"/>
+  <circle cx="24" cy="19" r="4.5" fill="#ef4444" fill-opacity="0.8"/>
+  <circle cx="42" cy="19" r="4.5" fill="#f59e0b" fill-opacity="0.8"/>
+  <circle cx="60" cy="19" r="4.5" fill="#10b981" fill-opacity="0.8"/>
+  <text x="90" y="23" fill="#64748b" font-family="monospace" font-size="11">STUDIO_SYS // ARCHITECTURE_SCHEMATIC.VIEW</text>
+  <text x="680" y="23" fill="#10b981" font-family="monospace" font-size="11">[PREVIEW_CANVAS]</text>
+
+  <!-- Engineering Schematic Visual Elements -->
+  <!-- Left Node: Client / Ingress -->
+  <rect x="70" y="110" width="160" height="110" rx="6" fill="#111827" stroke="#1f2d42" stroke-width="1.5"/>
+  <rect x="70" y="110" width="160" height="24" rx="4" fill="#172233"/>
+  <text x="85" y="126" fill="#10b981" font-family="monospace" font-size="10" font-weight="bold">CLIENT INTERFACE</text>
+  <text x="85" y="152" fill="#94a3b8" font-family="monospace" font-size="9">• Web Application View</text>
+  <text x="85" y="172" fill="#94a3b8" font-family="monospace" font-size="9">• Reactive State Node</text>
+  <text x="85" y="192" fill="#94a3b8" font-family="monospace" font-size="9">• Edge Gateway TLS</text>
+
+  <!-- Center Node: Core Service -->
+  <rect x="320" y="90" width="170" height="160" rx="6" fill="#111827" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.7"/>
+  <rect x="320" y="90" width="170" height="26" rx="4" fill="#16232d"/>
+  <text x="335" y="107" fill="#10b981" font-family="monospace" font-size="11" font-weight="bold">ENGINEERING CORE</text>
+  <text x="335" y="136" fill="#e2e8f0" font-family="monospace" font-size="9">• Business Microservice</text>
+  <text x="335" y="158" fill="#e2e8f0" font-family="monospace" font-size="9">• Distributed Cache</text>
+  <text x="335" y="180" fill="#e2e8f0" font-family="monospace" font-size="9">• Event Bus / Workers</text>
+  <text x="335" y="202" fill="#e2e8f0" font-family="monospace" font-size="9">• REST / gRPC Protocol</text>
+  <text x="335" y="228" fill="#10b981" font-family="monospace" font-size="9">STATUS: 200 OK</text>
+
+  <!-- Right Node: Persistence Layer -->
+  <rect x="580" y="110" width="150" height="110" rx="6" fill="#111827" stroke="#1f2d42" stroke-width="1.5"/>
+  <rect x="580" y="110" width="150" height="24" rx="4" fill="#172233"/>
+  <text x="595" y="126" fill="#06b6d4" font-family="monospace" font-size="10" font-weight="bold">PERSISTENCE</text>
+  <text x="595" y="152" fill="#94a3b8" font-family="monospace" font-size="9">• Relational DB Cluster</text>
+  <text x="595" y="172" fill="#94a3b8" font-family="monospace" font-size="9">• Read / Write Replicas</text>
+  <text x="595" y="192" fill="#94a3b8" font-family="monospace" font-size="9">• Automated Backups</text>
+
+  <!-- Connecting Data Lines with arrows -->
+  <line x1="230" y1="165" x2="320" y2="165" stroke="#10b981" stroke-width="2" stroke-dasharray="4 3"/>
+  <circle cx="275" cy="165" r="4" fill="#10b981"/>
+  <line x1="490" y1="165" x2="580" y2="165" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4 3"/>
+  <circle cx="535" cy="165" r="4" fill="#06b6d4"/>
+
+  <!-- Lower Tech Stack Banner -->
+  <rect x="70" y="300" width="660" height="90" rx="6" fill="#0f1520" stroke="#1e293b" stroke-width="1"/>
+  <text x="400" y="335" text-anchor="middle" fill="#f8fafc" font-family="monospace" font-size="14" font-weight="bold" letter-spacing="1">[PROJECT SCREENSHOT PLACEHOLDER]</text>
+  <text x="400" y="362" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="11">Place your real UI screenshots at /public/projects/project-*.jpg and link in portfolioData.ts</text>
+</svg>
