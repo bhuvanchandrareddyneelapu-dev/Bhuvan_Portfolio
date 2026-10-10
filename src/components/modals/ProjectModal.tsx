@@ -1,6 +1,6 @@
-import React from 'react';
 import { X, ExternalLink, CheckCircle2, AlertTriangle } from 'lucide-react';
 import type { ProjectItem } from '../../types/portfolio';
+import { getAssetUrl } from '../../utils/assets';
 
 const GithubIcon: React.FC<{ size?: number }> = ({ size = 15 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -75,7 +75,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             maxHeight: '340px'
           }}>
             <img
-              src={project.screenshot}
+              src={getAssetUrl(project.screenshot)}
               alt={`Architecture view for ${project.title}`}
               style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'contain' }}
               loading="lazy"

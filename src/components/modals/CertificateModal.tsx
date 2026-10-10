@@ -1,6 +1,7 @@
 import React from 'react';
-import { X, ExternalLink, Award } from 'lucide-react';
+import { X, ExternalLink, Award, FileText, Image as ImageIcon } from 'lucide-react';
 import type { CertificationItem } from '../../types/portfolio';
+import { getAssetUrl } from '../../utils/assets';
 
 interface CertificateModalProps {
   certification: CertificationItem | null;
@@ -10,11 +11,14 @@ interface CertificateModalProps {
 export const CertificateModal: React.FC<CertificateModalProps> = ({ certification, onClose }) => {
   if (!certification) return null;
 
+  const imageSrc = getAssetUrl(certification.certificateImage || '/certificates/cert-placeholder.svg');
+  const pdfSrc = certification.certificatePdf ? getAssetUrl(certification.certificatePdf) : null;
+
   return (
     <div className="modal-overlay" onClick={onClose} role="dialog" aria-modal="true" aria-labelledby="cert-modal-title">
       <div
         className="modal-dialog"
-        style={{ maxWidth: '680px', padding: 0 }}
+        style={{ maxWidth: '720px', padding: 0 }}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
@@ -29,7 +33,7 @@ export const CertificateModal: React.FC<CertificateModalProps> = ({ certificatio
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
             <Award size={18} color="var(--accent)" />
             <span className="mono" style={{ fontSize: '0.78rem', color: 'var(--accent)', fontWeight: 600 }}>
-              VERIFIED CREDENTIAL PREVIEW
+              VERIFIED CREDENTIAL PREVIEW {certification.category ? `// ${certification.category.toUpperCase()}` : ''}
             </span>
           </div>
           <button
@@ -57,18 +61,43 @@ export const CertificateModal: React.FC<CertificateModalProps> = ({ certificatio
             </div>
           </div>
 
+          {/* Pending file alert if applicable */}
+          {certification.isPendingFile && (
+            <div style={{
+              padding: '0.65rem 0.95rem',
+              background: 'rgba(245, 158, 11, 0.08)',
+              border: '1px solid rgba(245, 158, 11, 0.3)',
+              borderRadius: 'var(--radius-sm)',
+              fontSize: '0.82rem',
+              color: '#f59e0b',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.5rem'
+            }} className="mono">
+              <span>ℹ️ File Asset Pending: Place your certificate file at {certification.certificateImage || '/public/certificates/'}</span>
+            </div>
+          )}
+
           {/* Certificate Image or Technical Graphic */}
           <div style={{
             borderRadius: 'var(--radius-md)',
             overflow: 'hidden',
             border: '1px solid var(--border-subtle)',
-            background: 'var(--bg-canvas)'
+            background: 'var(--bg-canvas)',
+            maxHeight: '440px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
           }}>
             <img
-              src={certification.certificateImage || '/certificates/cert-placeholder.svg'}
+              src={imageSrc}
               alt={`Certificate credential for ${certification.name}`}
-              style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'contain' }}
+              style={{ width: '100%', height: 'auto', maxHeight: '420px', display: 'block', objectFit: 'contain' }}
               loading="lazy"
+              onError={(e) => {
+                // Graceful fallback to default svg if individual image hasn't been uploaded yet
+                (e.currentTarget as HTMLImageElement).src = getAssetUrl('/certificates/cert-placeholder.svg');
+              }}
             />
           </div>
 
@@ -82,18 +111,20 @@ export const CertificateModal: React.FC<CertificateModalProps> = ({ certificatio
             borderRadius: 'var(--radius-sm)',
             border: '1px solid var(--border-subtle)'
           }}>
-            <div>
-              <span className="mono" style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>ISSUE DATE:</span>
-              <div style={{ fontSize: '0.88rem', color: 'var(--text-primary)', marginTop: '2px' }}>
-                {certification.issueDate}
-              </div>
-            </div>
-
-            {certification.credentialId && (
+            {certification.category && (
               <div>
-                <span className="mono" style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>CREDENTIAL ID:</span>
-                <div className="mono" style={{ fontSize: '0.82rem', color: 'var(--accent)', marginTop: '2px' }}>
-                  {certification.credentialId}
+                <span className="mono" style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>CATEGORY:</span>
+                <div style={{ fontSize: '0.88rem', color: 'var(--text-primary)', marginTop: '2px' }}>
+                  {certification.category}
+                </div>
+              </div>
+            )}
+
+            {certification.issueDate && (
+              <div>
+                <span className="mono" style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>ISSUE DATE:</span>
+                <div style={{ fontSize: '0.88rem', color: 'var(--text-primary)', marginTop: '2px' }}>
+                  {certification.issueDate}
                 </div>
               </div>
             )}
@@ -101,8 +132,17 @@ export const CertificateModal: React.FC<CertificateModalProps> = ({ certificatio
             {certification.scoreOrResult && (
               <div>
                 <span className="mono" style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>SCORE / RESULT:</span>
-                <div style={{ fontSize: '0.88rem', color: 'var(--text-primary)', marginTop: '2px' }}>
+                <div style={{ fontSize: '0.88rem', color: 'var(--accent)', fontWeight: 600, marginTop: '2px' }}>
                   {certification.scoreOrResult}
+                </div>
+              </div>
+            )}
+
+            {certification.credentialId && (
+              <div>
+                <span className="mono" style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>CREDENTIAL ID:</span>
+                <div className="mono" style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', marginTop: '2px' }}>
+                  {certification.credentialId}
                 </div>
               </div>
             )}
@@ -116,21 +156,47 @@ export const CertificateModal: React.FC<CertificateModalProps> = ({ certificatio
           background: 'var(--bg-surface)',
           display: 'flex',
           justifyContent: 'space-between',
-          alignItems: 'center'
+          alignItems: 'center',
+          flexWrap: 'wrap',
+          gap: '0.75rem'
         }}>
-          {certification.verificationUrl ? (
-            <a
-              href={certification.verificationUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-primary btn-sm"
-            >
-              <ExternalLink size={14} />
-              Verify on Issuer Platform
-            </a>
-          ) : (
-            <div />
-          )}
+          <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+            {certification.verificationUrl && (
+              <a
+                href={certification.verificationUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary btn-sm"
+              >
+                <ExternalLink size={14} />
+                Verify Credential
+              </a>
+            )}
+
+            {pdfSrc && (
+              <a
+                href={pdfSrc}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-secondary btn-sm"
+              >
+                <FileText size={14} />
+                Open PDF File
+              </a>
+            )}
+
+            {certification.certificateImage && (
+              <a
+                href={imageSrc}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-secondary btn-sm"
+              >
+                <ImageIcon size={14} />
+                Enlarge Original Image
+              </a>
+            )}
+          </div>
 
           <button onClick={onClose} className="btn btn-secondary btn-sm">
             Close

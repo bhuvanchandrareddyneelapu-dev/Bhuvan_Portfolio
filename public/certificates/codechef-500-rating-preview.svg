@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%" fill="none">
+  <rect width="800" height="500" fill="#fcfbf9" rx="8"/>
+  <rect x="1" y="1" width="798" height="498" rx="7" stroke="#e2e0d8" stroke-width="2"/>
+  
+  <!-- Subtle background dots -->
+  <g fill="#c8c4b7" opacity="0.4">
+    <rect x="40" y="40" width="8" height="8"/>
+    <rect x="52" y="40" width="8" height="8"/>
+    <rect x="64" y="40" width="8" height="8"/>
+    <rect x="40" y="52" width="8" height="8"/>
+    <rect x="52" y="52" width="8" height="8"/>
+    <rect x="64" y="52" width="8" height="8"/>
+    <rect x="40" y="64" width="8" height="8"/>
+    <rect x="52" y="64" width="8" height="8"/>
+    <rect x="64" y="64" width="8" height="8"/>
+  </g>
+
+  <!-- Right Ribbon / Badge Shield -->
+  <path d="M 480 0 L 720 0 L 720 220 C 720 290 600 330 600 330 C 600 330 480 290 480 220 Z" fill="#d99b26"/>
+  <path d="M 495 0 L 705 0 L 705 210 C 705 275 600 310 600 310 C 600 310 495 275 495 210 Z" fill="#ffffff"/>
+  
+  <!-- Ribbon header -->
+  <line x1="530" y1="38" x2="670" y2="38" stroke="#d99b26" stroke-width="1.5"/>
+  <rect x="585" y="28" width="30" height="20" fill="#ffffff"/>
+  <text x="600" y="42" text-anchor="middle" fill="#8c6214" font-family="sans-serif" font-size="13" font-weight="700" letter-spacing="3">PRO</text>
+  <text x="600" y="80" text-anchor="middle" fill="#2d3748" font-family="sans-serif" font-size="24" font-weight="800" letter-spacing="1">CERTIFICATE</text>
+  <text x="600" y="115" text-anchor="middle" fill="#4a5568" font-family="sans-serif" font-size="18" font-weight="500">of Completion</text>
+  
+  <!-- CodeChef Brand -->
+  <rect x="520" y="160" width="160" height="40" rx="4" fill="#3e2723"/>
+  <text x="600" y="187" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="18" font-weight="900" letter-spacing="1">CODECHEF</text>
+
+  <!-- Left Certificate Body -->
+  <text x="70" y="75" fill="#718096" font-family="sans-serif" font-size="14" font-weight="500">22nd December 2025</text>
+  <text x="70" y="130" fill="#2d3748" font-family="sans-serif" font-size="26" font-weight="800">NEELAPU BHUVAN</text>
+  <text x="70" y="165" fill="#2d3748" font-family="sans-serif" font-size="26" font-weight="800">CHANDRA REDDY</text>
+  
+  <text x="70" y="225" fill="#718096" font-family="sans-serif" font-size="16">has completed all the practice problems of</text>
+  
+  <text x="70" y="285" fill="#1a202c" font-family="sans-serif" font-size="24" font-weight="800">500 difficulty rating</text>
+  <text x="70" y="320" fill="#4a5568" font-family="sans-serif" font-size="16" font-weight="600">by CodeChef</text>
+
+  <!-- Signature -->
+  <text x="70" y="415" fill="#2d3748" font-family="sans-serif" font-size="15" font-weight="700">Hrishikesh Kelkar</text>
+  <text x="70" y="435" fill="#718096" font-family="sans-serif" font-size="13">Business Head | CodeChef</text>
+
+  <!-- Footer Verification -->
+  <text x="730" y="425" text-anchor="end" fill="#718096" font-family="sans-serif" font-size="11">For certificate verification, please visit:</text>
+  <text x="730" y="442" text-anchor="end" fill="#4a5568" font-family="sans-serif" font-size="11">https://www.codechef.com/certificates/verify</text>
+  <text x="730" y="460" text-anchor="end" fill="#2d3748" font-family="monospace" font-size="11" font-weight="600">Certificate id: 8fd7745  Username: plush_web_08</text>
+</svg>

@@ -5,32 +5,24 @@ import type { PortfolioData } from '../types/portfolio';
  * 🛠️ THE DIGITAL ENGINEERING STUDIO — CENTRALIZED PORTFOLIO CONFIGURATION
  * =========================================================================
  *
- * INSTRUCTIONS FOR MANUAL CUSTOMIZATION:
- * 1. Replace all 'YOUR_*' and placeholder values below with your real information.
- * 2. Place images, resumes, and screenshots in the /public folder:
- *    - Profile Photo: Place at /public/profile.jpg (or update photoPath below)
- *    - Resume PDF: Place at /public/resume.pdf (or update resumePath below)
- *    - Project Screenshots: Place at /public/projects/project-1.jpg, etc.
- *    - Certificate Images: Place at /public/certificates/cert-1.jpg, etc.
- * 3. Adding/removing items: Simply add or remove objects in the respective arrays.
- * 4. Empty arrays or placeholder values are automatically handled gracefully by the UI.
+ * Developer: Bhuvan Chandra Reddy Neelapu
+ * Specialization: Full Stack Developer | Java Developer
+ * Location: Visakhapatnam (VSKP)
  * =========================================================================
  */
 
 export const portfolioData: PortfolioData = {
-  // Studio UI & Feature Configuration
   config: {
-    accentColor: '#10b981', // Precision Emerald (supports any HEX code: e.g. #06b6d4, #f59e0b, #6366f1)
+    accentColor: '#10b981', // Precision Emerald
     theme: 'dark',
     gridPattern: true,
-    showDevPlaceholderNotice: true, // Set to false when you have completed entering your details
-    contactEndpoint: '', // Optional: Enter your Formspree/Getform/custom API endpoint URL here
+    showDevPlaceholderNotice: false,
+    contactEndpoint: '', // Optional: Add Formspree endpoint when desired
   },
 
-  // Personal Information
   personal: {
     name: 'Bhuvan Chandra Reddy Neelapu',
-    wordmark: 'STUDIO // DEV',
+    wordmark: 'BHUVAN // DEV',
     professionalTitle: 'Full Stack Developer | Java Developer',
     tagline: 'Designing & Engineering High-Performance Scalable Software Systems',
     shortIntroduction:
@@ -43,403 +35,492 @@ export const portfolioData: PortfolioData = {
     careerGoals:
       'Seeking software development opportunities where I can learn, contribute, and build reliable applications.',
     educationSummary:
-      'Computer Science and Engineering student',
+      'B.Tech CSE, Raghu Engineering College, 2023–2027 expected, CGPA 8.62',
     professionalFocus:
       'Full Stack Development | Java Development | Problem-Solving',
-    photoPath: '/profile-placeholder.svg', // Replace with your photo path, e.g. '/profile.jpg'
-    resumePath: '/resume.pdf', // Put your resume PDF in the public folder as 'resume.pdf'
-    email: 'your.email@example.com',
-    phone: '', // Optional
-    location: '[YOUR CITY, COUNTRY]',
-    coordinates: 'LAT: 00.0000° N // LONG: 00.0000° E',
+    photoPath: '/profile-placeholder.svg',
+    resumePath: '/resume.pdf',
+    email: 'bhuvanchandrareddyneelapu@gmail.com',
+    location: 'Visakhapatnam (VSKP)',
+    coordinates: 'LAT: 17.6868° N // LONG: 83.2185° E',
     availabilityStatus: 'Open to Opportunities',
   },
 
-  // Social Profile & External Links
   socials: [
     {
       platform: 'github',
       label: 'GitHub',
-      url: 'https://github.com/your-username',
-      username: '@your-username',
+      url: 'https://github.com/bhuvanchandrareddyneelapu-dev',
+      username: '@bhuvanchandrareddyneelapu-dev',
     },
     {
       platform: 'linkedin',
       label: 'LinkedIn',
-      url: 'https://linkedin.com/in/your-profile',
-      username: 'in/your-profile',
+      url: 'https://www.linkedin.com/in/bhuvan-chandra-reddy-neelapu-35aaa0369/',
+      username: 'in/bhuvan-chandra-reddy-neelapu',
     },
     {
-      platform: 'twitter',
-      label: 'X (Twitter)',
-      url: 'https://x.com/your-handle',
-      username: '@your-handle',
+      platform: 'leetcode',
+      label: 'LeetCode',
+      url: 'https://leetcode.com/u/Bhuvan_chandra_reddy/',
+      username: 'Bhuvan_chandra_reddy',
+    },
+    {
+      platform: 'codechef',
+      label: 'CodeChef',
+      url: 'https://www.codechef.com/users/rag_23981a4689',
+      username: 'rag_23981a4689',
     },
     {
       platform: 'email',
-      label: 'Direct Email',
-      url: 'mailto:your.email@example.com',
+      label: 'Email',
+      url: 'mailto:bhuvanchandrareddyneelapu@gmail.com',
     },
   ],
 
-  // Technical Skills (Organized into 7 designated engineering groups)
   skills: [
     {
       categoryName: 'Programming Languages',
-      description: 'Core languages utilized for system logic and application development',
+      description: 'Core languages utilized for application development and systems logic',
       skills: [
-        { name: 'TypeScript', levelDescription: 'Core Language', tags: ['Typed', 'Frontend', 'Backend'] },
-        { name: 'JavaScript (ESNext)', levelDescription: 'Core Language', tags: ['Web', 'Async'] },
-        { name: 'Python', levelDescription: 'Proficient', tags: ['Data', 'Automation', 'Scripting'] },
-        { name: 'Go / Golang', levelDescription: 'Systems / Services', tags: ['Concurrency', 'High Performance'] },
-        { name: 'Java / C++', levelDescription: 'Academic / Core', tags: ['OOP', 'Algorithms'] },
-        { name: '[ADD LANGUAGE]', levelDescription: 'Configurable', tags: ['Custom'] },
-      ],
-    },
-    {
-      categoryName: 'Frontend Development',
-      description: 'Modern component architectures, UI performance, and state management',
-      skills: [
-        { name: 'React 18 / 19', levelDescription: 'Core Framework', tags: ['Components', 'Hooks', 'Vite'] },
-        { name: 'Next.js', levelDescription: 'Production Stack', tags: ['SSR', 'App Router'] },
-        { name: 'HTML5 & Modern CSS', levelDescription: 'Design Systems', tags: ['Semantic', 'Responsive'] },
-        { name: 'State Management (Zustand / Redux)', levelDescription: 'Architecture', tags: ['Global State'] },
-        { name: 'Tailwind CSS / Vanilla CSS', levelDescription: 'Styling', tags: ['Utility', 'Tokens'] },
-        { name: '[ADD FRONTEND TECH]', levelDescription: 'Configurable', tags: ['Custom'] },
+        { name: 'Java', levelDescription: 'Core Language', tags: ['Backend', 'OOP', 'Spring'] },
+        { name: 'TypeScript', levelDescription: 'Production Stack', tags: ['Typed', 'Frontend', 'React'] },
+        { name: 'JavaScript (ESNext)', levelDescription: 'Web Standard', tags: ['Web', 'Async', 'DOM'] },
+        { name: 'SQL', levelDescription: 'Data Modeling', tags: ['PostgreSQL', 'Queries', 'DDL'] },
+        { name: 'C / C++', levelDescription: 'Foundations', tags: ['Memory', 'Algorithms'] },
       ],
     },
     {
       categoryName: 'Backend Development',
-      description: 'API services, microservices, authentication, and server-side runtime',
+      description: 'Enterprise server runtimes, robust API contracts, and microservice architectures',
       skills: [
-        { name: 'Node.js & Express', levelDescription: 'Server Runtime', tags: ['RESTful', 'Microservices'] },
-        { name: 'FastAPI / Django', levelDescription: 'Services', tags: ['Python', 'Async APIs'] },
-        { name: 'REST & GraphQL APIs', levelDescription: 'Contract Design', tags: ['Schema', 'OpenAPI'] },
-        { name: 'Auth & Security (JWT, OAuth2)', levelDescription: 'Implementation', tags: ['RBAC', 'Sessions'] },
-        { name: 'WebSockets & gRPC', levelDescription: 'Real-time', tags: ['Bidirectional', 'Protobuf'] },
-        { name: '[ADD BACKEND TECH]', levelDescription: 'Configurable', tags: ['Custom'] },
+        { name: 'Spring Boot', levelDescription: 'Framework', tags: ['Java', 'REST APIs', 'Spring Security'] },
+        { name: 'RESTful API Design', levelDescription: 'API Contracts', tags: ['Endpoints', 'HTTP/JSON'] },
+        { name: 'Node.js & Express', levelDescription: 'Runtime', tags: ['JavaScript', 'Services'] },
+        { name: 'Authentication & Security', levelDescription: 'Implementation', tags: ['JWT', 'OAuth2', 'RBAC'] },
+      ],
+    },
+    {
+      categoryName: 'Frontend Development',
+      description: 'Modern component systems, responsive interfaces, and interactive web apps',
+      skills: [
+        { name: 'React 18 / 19', levelDescription: 'UI Library', tags: ['Hooks', 'Components', 'Vite'] },
+        { name: 'HTML5 & Modern CSS', levelDescription: 'Standards', tags: ['Responsive', 'Semantic', 'Flex/Grid'] },
+        { name: 'Tailwind CSS / Vanilla CSS', levelDescription: 'Styling', tags: ['Utility', 'Tokens'] },
+        { name: 'State Management', levelDescription: 'State Node', tags: ['Hooks', 'Context', 'Zustand'] },
       ],
     },
     {
       categoryName: 'Databases',
-      description: 'Relational, document, and in-memory data storage systems',
+      description: 'Relational data stores, query execution, and schema modeling',
       skills: [
-        { name: 'PostgreSQL', levelDescription: 'Relational Database', tags: ['ACID', 'Indexing', 'ORM'] },
-        { name: 'MongoDB', levelDescription: 'Document Store', tags: ['NoSQL', 'Aggregation'] },
-        { name: 'Redis', levelDescription: 'In-Memory Cache', tags: ['Caching', 'PubSub', 'Queues'] },
-        { name: 'Prisma / Drizzle ORM', levelDescription: 'Data Modeling', tags: ['Type Safety', 'Migrations'] },
-        { name: '[ADD DATABASE]', levelDescription: 'Configurable', tags: ['Custom'] },
-      ],
-    },
-    {
-      categoryName: 'Developer Tools',
-      description: 'Build tooling, containerization, orchestration, and version control',
-      skills: [
-        { name: 'Git & GitHub Workflows', levelDescription: 'Version Control', tags: ['CI/CD', 'Branching'] },
-        { name: 'Docker & Containers', levelDescription: 'Containerization', tags: ['Images', 'Docker Compose'] },
-        { name: 'Linux / POSIX Shell', levelDescription: 'Environment', tags: ['Bash', 'Automation'] },
-        { name: 'Vite / Webpack', levelDescription: 'Build Tooling', tags: ['Bundlers', 'HMR'] },
-        { name: 'Postman / Bruno', levelDescription: 'API Testing', tags: ['Integration'] },
-        { name: '[ADD TOOL]', levelDescription: 'Configurable', tags: ['Custom'] },
+        { name: 'PostgreSQL', levelDescription: 'Relational DB', tags: ['ACID', 'Indexing', 'Schemas'] },
+        { name: 'MySQL', levelDescription: 'RDBMS', tags: ['Relational', 'Queries'] },
+        { name: 'Database Normalization', levelDescription: 'Theory', tags: ['1NF-3NF', 'Constraints'] },
       ],
     },
     {
       categoryName: 'Computer Science Fundamentals',
-      description: 'Foundational algorithmic concepts and system engineering principles',
+      description: 'Foundational algorithmic proficiency and theoretical computer science',
       skills: [
-        { name: 'Data Structures & Algorithms', levelDescription: 'Foundations', tags: ['Complexity Analysis', 'Graphs', 'Trees'] },
-        { name: 'System Design & Scalability', levelDescription: 'Architecture', tags: ['Distributed Systems', 'Load Balancing'] },
-        { name: 'Object-Oriented Design', levelDescription: 'Principles', tags: ['SOLID', 'Design Patterns'] },
-        { name: 'Operating Systems & Networking', levelDescription: 'Core Theory', tags: ['Concurrency', 'TCP/IP', 'HTTP/3'] },
-        { name: 'Database Normalization & Query Optimization', levelDescription: 'Theory', tags: ['B-Trees', 'Transactions'] },
+        { name: 'Data Structures and Algorithms', levelDescription: 'Proficient', tags: ['Arrays', 'Trees', 'Graphs', 'DP'] },
+        { name: 'Object-Oriented Programming (OOP)', levelDescription: 'Principles', tags: ['Encapsulation', 'Polymorphism', 'SOLID'] },
+        { name: 'Database Management Systems (DBMS)', levelDescription: 'Core Theory', tags: ['Transactions', 'Concurrency', 'ACID'] },
+        { name: 'Operating Systems & Networking', levelDescription: 'Foundations', tags: ['Processes', 'Threads', 'TCP/IP'] },
+      ],
+    },
+    {
+      categoryName: 'Developer Tools',
+      description: 'Version control, build environments, testing, and developer workflow',
+      skills: [
+        { name: 'Git & GitHub', levelDescription: 'Version Control', tags: ['Branching', 'Collaboration'] },
+        { name: 'Vite', levelDescription: 'Bundler', tags: ['HMR', 'ESBuild'] },
+        { name: 'Postman / REST Clients', levelDescription: 'API Testing', tags: ['Endpoints', 'Payloads'] },
+        { name: 'IntelliJ IDEA & VS Code', levelDescription: 'IDEs', tags: ['Java', 'TypeScript'] },
       ],
     },
     {
       categoryName: 'Other Skills',
-      description: 'Complementary technical disciplines and engineering practices',
+      description: 'Collaboration, problem-solving, and continuous engineering development',
       skills: [
-        { name: 'Agile & Scrum Methodologies', levelDescription: 'Process', tags: ['Sprints', 'Collaboration'] },
-        { name: 'Unit & Integration Testing (Jest, Vitest)', levelDescription: 'Quality', tags: ['TDD', 'Coverage'] },
-        { name: 'Cloud Basics (AWS / GCP / Cloudflare)', levelDescription: 'Infrastructure', tags: ['S3', 'Serverless', 'CDN'] },
-        { name: 'Technical Documentation & Architecture RFCs', levelDescription: 'Communication', tags: ['Markdown', 'Diagrams'] },
-        { name: '[ADD OTHER SKILL]', levelDescription: 'Configurable', tags: ['Custom'] },
+        { name: 'Problem-Solving & Competitive Programming', levelDescription: 'Active', tags: ['CodeChef 1000+', 'LeetCode 500+'] },
+        { name: 'Agile & Team Collaboration', levelDescription: 'Practice', tags: ['Sprints', 'Code Reviews'] },
+        { name: 'Technical Documentation', levelDescription: 'Communication', tags: ['Markdown', 'Architecture RFCs'] },
       ],
     },
   ],
 
-  // Featured Projects
   projects: [
     {
       id: 'project-1',
-      title: '[FEATURED PROJECT 01]',
-      summary: '[PROJECT 01 SUMMARY — A concise 1-2 sentence statement explaining the problem and your solution.]',
+      title: 'NovaFinance Pro Suite / Smart Personal Finance Tracker',
+      summary: 'A full-stack financial management solution providing automated income/expense tracking, monthly budgets, and actionable fiscal analytics.',
       description:
-        '[PROJECT 01 DETAILED DESCRIPTION — Thorough breakdown of the project architecture, operational workflow, user capabilities, and technical delivery.]',
+        'Engineered a complete financial tracking application featuring modular accounting ledgers, category-wise expenditure analytics, and customizable budget limit alerts. Built with a decoupled Java Spring Boot backend communicating with a responsive React and TypeScript frontend, backed by PostgreSQL for transactional consistency.',
       category: 'Full-Stack',
       featured: true,
       screenshot: '/projects/project-placeholder.svg',
-      technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Docker'],
-      githubUrl: 'https://github.com/your-username/project-01',
-      liveDemoUrl: 'https://your-project-01-demo.com',
+      technologies: ['Java', 'Spring Boot', 'React', 'TypeScript', 'PostgreSQL', 'REST APIs'],
+      githubUrl: 'https://github.com/bhuvanchandrareddyneelapu-dev',
       caseStudy: {
         architecture:
-          'Client-Server Architecture with decoupled API layer, cached query responses via Redis, and automated CI/CD pipeline.',
+          'Client-Server Architecture with Spring Boot REST API layer, JPA / Hibernate ORM, and PostgreSQL ACID database.',
         keyFeatures: [
-          'High-throughput data ingestion pipeline handling real-time state changes.',
-          'Type-safe end-to-end client communications with strict schema validation.',
-          'Granular Role-Based Access Control (RBAC) with tokenized authentication.',
-          'Responsive, high-density dashboard rendering under 60fps budget.',
+          'Dynamic expense categorized logging with currency and transaction date filtering.',
+          'Real-time monthly budgeting thresholds with visual health indicators.',
+          'Interactive spending breakdown charts and historical monthly comparisons.',
+          'Secure REST API endpoints with robust error handling and input validation.',
         ],
         technicalChallenges: [
           {
-            challenge: 'High latency during real-time event aggregation across concurrent sessions.',
-            solution: 'Implemented in-memory caching and Redis pub/sub channels, reducing query overhead by over 70%.',
-          },
-          {
-            challenge: 'State desynchronization across distributed client views.',
-            solution: 'Designed an optimistic concurrency control protocol with fallback reconciliation mechanisms.',
+            challenge: 'Ensuring transaction atomicity and accurate balance computation during concurrent updates.',
+            solution: 'Utilized PostgreSQL transactional boundaries (@Transactional in Spring Boot) and database constraints.',
           },
         ],
         implementationDetails: [
-          'Modular code structure adhering to Clean Architecture principles.',
-          'Comprehensive automated unit and integration tests with mock services.',
-          'Containerized deployment with multi-stage Docker builds.',
+          'RESTful controllers mapped to business service layers adhering to Clean Architecture.',
+          'Type-safe frontend data models matching backend DTO schemas.',
         ],
       },
     },
     {
       id: 'project-2',
-      title: '[FEATURED PROJECT 02]',
-      summary: '[PROJECT 02 SUMMARY — High-performance distributed system or interactive web application.]',
+      title: 'Donation.App',
+      summary: 'A transparent donation platform connecting verified community causes with donors, featuring real-time fundraising goal progress.',
       description:
-        '[PROJECT 02 DETAILED DESCRIPTION — Detail the technical choices, domain logic, data models, and outcomes of this project.]',
-      category: 'Systems',
+        'Designed and developed a full-stack donation application facilitating seamless contributions to social welfare campaigns. The system provides transparency through real-time funding milestone visualization, donor listings, and an intuitive campaign exploration interface.',
+      category: 'Full-Stack',
       featured: true,
       screenshot: '/projects/project-placeholder.svg',
-      technologies: ['Go', 'gRPC', 'PostgreSQL', 'Redis', 'Kubernetes'],
-      githubUrl: 'https://github.com/your-username/project-02',
-      liveDemoUrl: 'https://your-project-02-demo.com',
+      technologies: ['React', 'TypeScript', 'Node.js / Java', 'REST APIs', 'Tailwind CSS / CSS'],
+      githubUrl: 'https://github.com/bhuvanchandrareddyneelapu-dev',
       caseStudy: {
-        architecture: 'Event-driven microservice system communicating over binary gRPC protocols.',
+        architecture: 'Modular Web Application utilizing REST API contracts for campaign state management.',
         keyFeatures: [
-          'Sub-millisecond serialization using Protocol Buffers.',
-          'Resilient fault tolerance with circuit breaker patterns.',
-          'Health monitoring and telemetry metrics instrumentation.',
+          'Campaign discovery catalogue with search and category filtering.',
+          'Real-time donation progress bars showing pledged amounts against target goals.',
+          'Responsive checkout flow supporting multiple simulated payment methods.',
+          'Accessible, high-contrast UI optimized for both desktop and mobile devices.',
         ],
         technicalChallenges: [
           {
-            challenge: 'Handling burst traffic spikes without dropping database connections.',
-            solution: 'Implemented adaptive token-bucket rate limiting and asynchronous worker queues.',
+            challenge: 'Rendering live fundraising progress without UI lag.',
+            solution: 'Optimized state transitions using React hooks and memoized components.',
           },
         ],
         implementationDetails: [
-          'Zero external dependency microservice core.',
-          'Structured JSON logging and Prometheus metrics endpoint.',
-        ],
-      },
-    },
-    {
-      id: 'project-3',
-      title: '[FEATURED PROJECT 03]',
-      summary: '[PROJECT 03 SUMMARY — Creative engineering platform or full-stack web application.]',
-      description:
-        '[PROJECT 03 DETAILED DESCRIPTION — Explain the frontend ergonomics, backend services, and interactive components.]',
-      category: 'Frontend',
-      featured: true,
-      screenshot: '/projects/project-placeholder.svg',
-      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Web Workers'],
-      githubUrl: 'https://github.com/your-username/project-03',
-      liveDemoUrl: 'https://your-project-03-demo.com',
-      caseStudy: {
-        architecture: 'Single Page Application utilizing Web Workers for client-side heavy computation.',
-        keyFeatures: [
-          'Zero-jank UI updates through off-main-thread processing.',
-          'Accessible keyboard navigation across all component trees.',
-          'Offline capabilities with Service Worker caching.',
-        ],
-        technicalChallenges: [
-          {
-            challenge: 'Large dataset rendering causing frame drops in virtualized list views.',
-            solution: 'Implemented windowing algorithms and dynamic node recycling.',
-          },
-        ],
-        implementationDetails: [
-          'Design token system built with custom CSS variables.',
-          'Lighthouse accessibility score audited at 100/100.',
+          'Component-driven architecture using TypeScript and modular styling.',
+          'Validated form inputs ensuring clean and sanitised contribution data.',
         ],
       },
     },
   ],
 
-  // Professional Experience
   experience: [
     {
       id: 'exp-1',
-      organization: '[ORGANIZATION / COMPANY NAME]',
-      jobTitle: '[JOB TITLE / ROLE]',
-      location: '[CITY, STATE / REMOTE]',
-      employmentType: 'Full-time',
-      startDate: '[START DATE — e.g. Jan 2024]',
+      organization: 'Avaintern',
+      jobTitle: 'Full Stack Developer Intern',
+      location: 'Remote',
+      employmentType: 'Internship',
+      startDate: '2024',
       endDate: 'Present',
       isCurrent: true,
       responsibilities: [
-        '[RESPONSIBILITY 01 — Architectural design and implementation of core modules.]',
-        '[RESPONSIBILITY 02 — Collaborated across engineering teams to ship production features on time.]',
-        '[RESPONSIBILITY 03 — Conducted code reviews and established automated testing guidelines.]',
+        'Designed and implemented full-stack web application features using Java, Spring Boot, React, and TypeScript.',
+        'Developed structured RESTful API endpoints and integrated relational PostgreSQL database schemas.',
+        'Collaborated on code reviews, bug fixes, and continuous improvements to application responsiveness.',
       ],
-      technologies: ['TypeScript', 'React', 'Node.js', 'PostgreSQL', 'Docker'],
+      technologies: ['Java', 'Spring Boot', 'React', 'TypeScript', 'PostgreSQL', 'REST APIs'],
       verifiedAchievements: [
-        '[VERIFIED ACHIEVEMENT 01 — Optimized page load times or reduced API latency by X%.]',
-        '[VERIFIED ACHIEVEMENT 02 — Led migration or built a core module used by Y users.]',
-      ],
-    },
-    {
-      id: 'exp-2',
-      organization: '[PREVIOUS ORGANIZATION / COMPANY]',
-      jobTitle: '[SOFTWARE ENGINEERING INTERN / JUNIOR ENGINEER]',
-      location: '[CITY, STATE / REMOTE]',
-      employmentType: 'Internship',
-      startDate: '[START DATE — e.g. Jun 2023]',
-      endDate: '[END DATE — e.g. Dec 2023]',
-      isCurrent: false,
-      responsibilities: [
-        '[RESPONSIBILITY 01 — Developed responsive UI components and backend REST endpoints.]',
-        '[RESPONSIBILITY 02 — Wrote unit tests and improved test suite code coverage.]',
-      ],
-      technologies: ['JavaScript', 'Python', 'FastAPI', 'SQLite', 'Git'],
-      verifiedAchievements: [
-        '[VERIFIED ACHIEVEMENT 01 — Automated manual deployment script reducing release cycle by X minutes.]',
+        'Successfully contributed to core application workflows and backend API endpoints during the internship.',
       ],
     },
   ],
 
-  // Coding Profiles (Platforms and profile handles)
   codingProfiles: [
     {
-      platform: 'GitHub',
-      usernamePlaceholder: 'github.com/[YOUR-USERNAME]',
-      profileUrl: 'https://github.com/your-username',
-      metricLabel: 'Repositories & Contributions',
-      metricValue: 'Active Contributor',
-      badges: ['Open Source', 'Code Reviewer'],
+      platform: 'CodeChef',
+      usernamePlaceholder: 'rag_23981a4689',
+      profileUrl: 'https://www.codechef.com/users/rag_23981a4689',
+      metricLabel: 'Problems Solved',
+      metricValue: '1000+ Solved',
+      badges: ['1000+ Problems', 'Active Solver', 'Practice Track'],
     },
     {
       platform: 'LeetCode',
-      usernamePlaceholder: 'leetcode.com/u/[YOUR-USERNAME]',
-      profileUrl: 'https://leetcode.com/u/your-username',
-      metricLabel: 'Problem Solving Profile',
-      metricValue: 'Active Solver',
-      badges: ['Algorithms', 'Data Structures'],
+      usernamePlaceholder: 'Bhuvan_chandra_reddy',
+      profileUrl: 'https://leetcode.com/u/Bhuvan_chandra_reddy/',
+      metricLabel: 'Problems Solved',
+      metricValue: '500+ Solved',
+      badges: ['500+ Problems', 'DSA & Algorithms', 'Consistent Solver'],
     },
     {
-      platform: 'CodeChef',
-      usernamePlaceholder: 'codechef.com/users/[YOUR-USERNAME]',
-      profileUrl: 'https://www.codechef.com/users/your-username',
-      metricLabel: 'Competitive Programming',
-      metricValue: 'Contestant',
-      badges: ['Contests', 'Div Division'],
+      platform: 'SkillRack',
+      usernamePlaceholder: 'Verified Profile',
+      profileUrl: '', // URL omitted as not provided; card renders cleanly without broken link
+      metricLabel: 'Platform Status',
+      metricValue: 'Active Practice',
+      badges: ['SkillRack Certified', 'Problem Solving'],
     },
     {
-      platform: 'Codeforces / HackerRank',
-      usernamePlaceholder: 'codeforces.com/profile/[YOUR-USERNAME]',
-      profileUrl: 'https://codeforces.com/profile/your-username',
-      metricLabel: 'Problem Solving Platform',
-      metricValue: 'Verified Profile',
-      badges: ['Problem Solving', 'Mathematics'],
+      platform: 'GitHub',
+      usernamePlaceholder: 'bhuvanchandrareddyneelapu-dev',
+      profileUrl: 'https://github.com/bhuvanchandrareddyneelapu-dev',
+      metricLabel: 'Code Repositories',
+      metricValue: 'Open Source',
+      badges: ['Portfolio', 'Full Stack Projects'],
     },
   ],
 
-  // Achievements (Hackathons, Awards, Leadership, Competitions)
   achievements: [
     {
       id: 'ach-1',
-      title: '[ACHIEVEMENT TITLE 01 — e.g. 1st Place at National Hackathon]',
+      title: 'HACKVERSE 2.0 — 24-Hour Hackathon Certificate',
       category: 'Hackathon',
-      organization: '[ORGANIZATION / SPONSOR]',
-      date: '[DATE — e.g. Oct 2024]',
+      organization: 'HACKVERSE 2.0',
+      date: '2024',
       description:
-        '[ACHIEVEMENT DESCRIPTION — Built a prototype addressing [Problem Statement] within 36 hours. Evaluated on architecture, user experience, and technical execution.]',
-      evidenceUrl: 'https://example.com/certificate-or-project-proof',
+        'Participated in HACKVERSE 2.0, an intensive 24-hour national hackathon prototyping real-world technology solutions and collaborating under strict delivery deadlines.',
+      evidenceUrl: 'https://github.com/bhuvanchandrareddyneelapu-dev',
     },
     {
       id: 'ach-2',
-      title: '[ACHIEVEMENT TITLE 02 — e.g. Finalist / Merit Award in Coding Competition]',
+      title: 'CodeChef 1000+ Problems Solved — Problem Solver Diamond Badge',
       category: 'Competition',
-      organization: '[ORGANIZATION / PLATFORM]',
-      date: '[DATE — e.g. Jun 2024]',
+      organization: 'CodeChef',
+      date: 'Active',
       description:
-        '[ACHIEVEMENT DESCRIPTION — Ranked among top participants across algorithmic challenge tracks.]',
-      evidenceUrl: 'https://example.com/proof',
+        'Successfully completed and verified over 1000 algorithmic and programming challenges on the CodeChef competitive platform, earning the Problem Solver Diamond Badge (Username: rag_23981a4689).',
+      evidenceUrl: 'https://www.codechef.com/users/rag_23981a4689',
+      imageUrl: '/certificates/codechef-1000-diamond.jpg',
     },
     {
       id: 'ach-3',
-      title: '[ACHIEVEMENT TITLE 03 — e.g. Technical Club Lead / Open Source Contributor]',
-      category: 'Leadership',
-      organization: '[UNIVERSITY / COMMUNITY]',
-      date: '[DATE — e.g. 2023 - 2024]',
+      title: 'LeetCode 500+ Problems Solved Milestone',
+      category: 'Competition',
+      organization: 'LeetCode',
+      date: 'Active',
       description:
-        '[ACHIEVEMENT DESCRIPTION — Conducted technical workshops on modern web architecture and mentored fellow students.]',
-      evidenceUrl: 'https://example.com/proof',
+        'Solved 500+ algorithmic problems covering data structures, dynamic programming, trees, and graphs on LeetCode (Profile: Bhuvan_chandra_reddy).',
+      evidenceUrl: 'https://leetcode.com/u/Bhuvan_chandra_reddy/',
     },
   ],
 
-  // Certifications
   certifications: [
+    // NPTEL Certificates
     {
-      id: 'cert-1',
-      name: '[CERTIFICATION NAME 01 — e.g. AWS Certified Cloud Practitioner / Meta Frontend Developer]',
-      issuingOrganization: '[ISSUING ORGANIZATION — e.g. Amazon Web Services / Coursera / Meta]',
-      issueDate: '[ISSUE DATE — e.g. Aug 2024]',
-      expirationDate: '[EXPIRATION DATE / Does Not Expire]',
-      credentialId: '[CREDENTIAL ID / CERT-12345678]',
-      scoreOrResult: '[SCORE OR GRADE — Optional]',
-      verificationUrl: 'https://example.com/verify-credential',
+      id: 'cert-nptel-java',
+      name: 'Programming in Java — NPTEL Online Certification',
+      issuingOrganization: 'NPTEL / IIT (Ministry of Education)',
+      category: 'NPTEL',
+      issueDate: 'Verified',
+      scoreOrResult: 'Score: 83% (Elite Certificate)',
       certificateImage: '/certificates/cert-placeholder.svg',
+      isPendingFile: false,
     },
     {
-      id: 'cert-2',
-      name: '[CERTIFICATION NAME 02 — e.g. Algorithmic Problem Solving Specialization]',
-      issuingOrganization: '[ISSUING ORGANIZATION — e.g. University / Platform]',
-      issueDate: '[ISSUE DATE — e.g. Mar 2024]',
-      credentialId: '[CREDENTIAL ID / CERT-87654321]',
-      scoreOrResult: '[Grade: 98% / Completed with Honors]',
-      verificationUrl: 'https://example.com/verify-credential',
+      id: 'cert-nptel-dbms',
+      name: 'Database Management Systems (DBMS) — NPTEL Online Certification',
+      issuingOrganization: 'NPTEL / IIT (Ministry of Education)',
+      category: 'NPTEL',
+      issueDate: 'Verified',
+      scoreOrResult: 'Score: 65% (Elite Certificate)',
       certificateImage: '/certificates/cert-placeholder.svg',
+      isPendingFile: false,
+    },
+
+    // Internship Certificates
+    {
+      id: 'cert-intern-avaintern',
+      name: 'Full Stack Developer Internship Certificate',
+      issuingOrganization: 'Avaintern',
+      category: 'Internship',
+      issueDate: '2024',
+      scoreOrResult: 'Completed Internship',
+      certificateImage: '/certificates/cert-placeholder.svg',
+      isPendingFile: false,
+    },
+
+    // Hackathon Certificates
+    {
+      id: 'cert-hack-hackverse',
+      name: 'HACKVERSE 2.0 — 24-Hour Hackathon Certificate',
+      issuingOrganization: 'HACKVERSE 2.0',
+      category: 'Hackathon',
+      issueDate: '2024',
+      scoreOrResult: '24-Hour Hackathon Participant',
+      certificateImage: '/certificates/cert-placeholder.svg',
+      isPendingFile: false,
+    },
+
+    // CodeChef Certificates & Verified Achievements
+    {
+      id: 'cert-cc-diamond',
+      name: 'CodeChef 1000 Problems Solved — Problem Solver Diamond Badge',
+      issuingOrganization: 'CodeChef',
+      category: 'CodeChef',
+      issueDate: 'Verified Milestone',
+      scoreOrResult: '1000 Problems Solved • Diamond Badge',
+      verificationUrl: 'https://www.codechef.com/users/rag_23981a4689',
+      certificateImage: '/certificates/codechef-1000-diamond.jpg',
+      isPendingFile: false,
+    },
+    {
+      id: 'cert-cc-css',
+      name: 'CSS — Certificate of Completion',
+      issuingOrganization: 'CodeChef',
+      category: 'CodeChef',
+      issueDate: '15th March 2026',
+      credentialId: '85679b6',
+      scoreOrResult: 'Completed all lessons and projects • rag_23981a4689',
+      verificationUrl: 'https://www.codechef.com/certificates/verify',
+      certificateImage: '/certificates/codechef-css-preview.svg',
+      certificatePdf: '/certificates/codechef-css.pdf',
+      isPendingFile: false,
+    },
+    {
+      id: 'cert-cc-js',
+      name: 'Learn JavaScript — Certificate of Completion',
+      issuingOrganization: 'CodeChef',
+      category: 'CodeChef',
+      issueDate: '25th March 2026',
+      credentialId: '308ee48',
+      scoreOrResult: 'Completed all lessons and projects • rag_23981a4689',
+      verificationUrl: 'https://www.codechef.com/certificates/verify',
+      certificateImage: '/certificates/codechef-javascript-preview.svg',
+      certificatePdf: '/certificates/codechef-javascript.pdf',
+      isPendingFile: false,
+    },
+    {
+      id: 'cert-cc-html',
+      name: 'HTML — Certificate of Completion',
+      issuingOrganization: 'CodeChef',
+      category: 'CodeChef',
+      issueDate: '5th March 2026',
+      credentialId: 'f1aedb8',
+      scoreOrResult: 'Completed all lessons and projects • rag_23981a4689',
+      verificationUrl: 'https://www.codechef.com/certificates/verify',
+      certificateImage: '/certificates/codechef-html-preview.svg',
+      certificatePdf: '/certificates/codechef-html.pdf',
+      isPendingFile: false,
+    },
+    {
+      id: 'cert-cc-500',
+      name: '500 Difficulty Rating — Certificate of Completion',
+      issuingOrganization: 'CodeChef',
+      category: 'CodeChef',
+      issueDate: '22nd December 2025',
+      credentialId: '8fd7745',
+      scoreOrResult: 'Completed all practice problems • plush_web_08',
+      verificationUrl: 'https://www.codechef.com/certificates/verify',
+      certificateImage: '/certificates/codechef-500-rating-preview.svg',
+      certificatePdf: '/certificates/codechef-500-rating.pdf',
+      isPendingFile: false,
+    },
+    {
+      id: 'cert-cc-6',
+      name: 'CodeChef Problem Solving Certificate 06',
+      issuingOrganization: 'CodeChef',
+      category: 'CodeChef',
+      issueDate: 'Pending File Placement',
+      scoreOrResult: 'Contest Challenge Track',
+      certificateImage: '/certificates/cert-placeholder.svg',
+      isPendingFile: true,
+    },
+    {
+      id: 'cert-cc-7',
+      name: 'CodeChef Problem Solving Certificate 07',
+      issuingOrganization: 'CodeChef',
+      category: 'CodeChef',
+      issueDate: 'Pending File Placement',
+      scoreOrResult: 'Algorithmic Track',
+      certificateImage: '/certificates/cert-placeholder.svg',
+      isPendingFile: true,
+    },
+
+    // SkillRack Certificates (2 entries)
+    {
+      id: 'cert-sr-1',
+      name: 'SkillRack Certification 01',
+      issuingOrganization: 'SkillRack',
+      category: 'SkillRack',
+      issueDate: 'Verified',
+      scoreOrResult: 'Programming Proficiency',
+      certificateImage: '/certificates/skillrack-cert-1.jpg',
+      isPendingFile: true,
+    },
+    {
+      id: 'cert-sr-2',
+      name: 'SkillRack Certification 02',
+      issuingOrganization: 'SkillRack',
+      category: 'SkillRack',
+      issueDate: 'Verified',
+      scoreOrResult: 'Code Challenges Track',
+      certificateImage: '/certificates/skillrack-cert-2.jpg',
+      isPendingFile: true,
+    },
+
+    // LeetCode Achievements
+    {
+      id: 'cert-lc-500',
+      name: 'LeetCode 500+ Problems Solved Milestone',
+      issuingOrganization: 'LeetCode',
+      category: 'LeetCode',
+      issueDate: 'Verified',
+      scoreOrResult: '500+ Algorithms Solved',
+      verificationUrl: 'https://leetcode.com/u/Bhuvan_chandra_reddy/',
+      certificateImage: '/certificates/cert-placeholder.svg',
+      isPendingFile: false,
     },
   ],
 
-  // Education Timeline
   education: [
     {
-      id: 'edu-1',
-      institution: '[YOUR UNIVERSITY / COLLEGE NAME]',
-      degree: '[YOUR DEGREE — e.g. Bachelor of Technology / B.S.]',
-      fieldOfStudy: '[FIELD OF STUDY — e.g. Computer Science and Engineering]',
-      startDate: '2022',
-      endDate: '2026',
-      gradeOrCgpa: '[CGPA OR PERCENTAGE — e.g. 8.8 / 10.0 or 3.8 / 4.0]',
-      location: '[CITY, STATE / COUNTRY]',
+      id: 'edu-btech',
+      institution: 'Raghu Engineering College',
+      degree: 'Bachelor of Technology (B.Tech)',
+      fieldOfStudy: 'Computer Science and Engineering',
+      startDate: '2023',
+      endDate: '2027 (Expected)',
+      gradeOrCgpa: 'CGPA: 8.62 / 10.0',
+      location: 'Visakhapatnam, Andhra Pradesh',
       highlights: [
-        'Relevant Coursework: Data Structures, Operating Systems, Database Management Systems, Computer Networks, Software Engineering',
-        'Academic Honors & Dean\'s List recognition',
+        'Core coursework: Data Structures and Algorithms, Object-Oriented Programming (Java), Database Management Systems, Operating Systems, Computer Networks',
+        'Consistently maintained a high academic CGPA of 8.62',
       ],
       description:
-        '[OPTIONAL DESCRIPTION — Key projects completed, academic focus areas, or student committee roles.]',
+        'Pursuing Bachelor of Technology with a strong foundation in software engineering, Java development, and full stack web technologies.',
     },
     {
-      id: 'edu-2',
-      institution: '[YOUR HIGH SCHOOL / PRE-UNIVERSITY COLLEGE]',
-      degree: '[SENIOR SECONDARY / HIGHER SECONDARY]',
-      fieldOfStudy: '[SCIENCE / MATHEMATICS & COMPUTER SCIENCE]',
-      startDate: '2020',
-      endDate: '2022',
-      gradeOrCgpa: '[PERCENTAGE OR GRADE — e.g. 92%]',
-      location: '[CITY, STATE]',
+      id: 'edu-inter',
+      institution: 'Narayana Junior College',
+      degree: 'Intermediate (Class XII)',
+      fieldOfStudy: 'MPC (Mathematics, Physics, Chemistry)',
+      startDate: '2021',
+      endDate: '2023',
+      gradeOrCgpa: 'Percentage: 90.2%',
+      location: 'Visakhapatnam, Andhra Pradesh',
       highlights: [
-        'Majors in Physics, Chemistry, Mathematics, and Computer Science',
+        'Specialization in Mathematics, Physics, and Chemistry with 90.2% aggregate',
       ],
       description:
-        '[OPTIONAL DESCRIPTION — Foundational academic excellence and early programming achievements.]',
+        'Pre-university higher secondary education with strong analytical and mathematical problem-solving foundations.',
+    },
+    {
+      id: 'edu-tenth',
+      institution: 'Priyankas Vidyodaya High School',
+      degree: 'Secondary School Certificate (Class X)',
+      fieldOfStudy: 'General Schooling',
+      startDate: '2020',
+      endDate: '2021',
+      gradeOrCgpa: 'Score: 100% (10.0 CGPA)',
+      location: 'Visakhapatnam, Andhra Pradesh',
+      highlights: [
+        'Achieved a perfect 100% score (10.0 CGPA) in Class X Board examinations',
+      ],
+      description:
+        'Completed secondary school education with distinction and top academic honors.',
     },
   ],
 };

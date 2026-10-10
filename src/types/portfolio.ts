@@ -13,7 +13,7 @@ export interface SocialLink {
 
 export interface ProjectCaseStudy {
   architecture?: string;
-  architectureDiagram?: string; // image or description
+  architectureDiagram?: string;
   keyFeatures: string[];
   technicalChallenges: {
     challenge: string;
@@ -31,7 +31,7 @@ export interface ProjectItem {
   featured: boolean;
   screenshot: string;
   technologies: string[];
-  githubUrl: string;
+  githubUrl?: string;
   liveDemoUrl?: string;
   caseStudy?: ProjectCaseStudy;
 }
@@ -42,7 +42,7 @@ export interface SkillCategory {
   skills: {
     name: string;
     icon?: string;
-    levelDescription?: string; // e.g. "Production", "Proficient", "Core" - NO arbitrary percentages
+    levelDescription?: string;
     tags?: string[];
   }[];
 }
@@ -54,7 +54,7 @@ export interface ExperienceItem {
   location?: string;
   employmentType?: 'Full-time' | 'Part-time' | 'Internship' | 'Contract';
   startDate: string;
-  endDate: string; // e.g., "Present" or "Dec 2025"
+  endDate: string;
   isCurrent?: boolean;
   responsibilities: string[];
   technologies: string[];
@@ -64,7 +64,7 @@ export interface ExperienceItem {
 export interface CodingProfileItem {
   platform: string;
   usernamePlaceholder: string;
-  profileUrl: string;
+  profileUrl?: string;
   metricLabel?: string;
   metricValue?: string;
   badges?: string[];
@@ -81,16 +81,28 @@ export interface AchievementItem {
   imageUrl?: string;
 }
 
+export type CertificateCategory =
+  | 'NPTEL'
+  | 'Internship'
+  | 'Hackathon'
+  | 'CodeChef'
+  | 'SkillRack'
+  | 'LeetCode'
+  | 'Other';
+
 export interface CertificationItem {
   id: string;
   name: string;
   issuingOrganization: string;
-  issueDate: string;
+  category?: CertificateCategory;
+  issueDate?: string;
   expirationDate?: string;
   credentialId?: string;
   scoreOrResult?: string;
   verificationUrl?: string;
   certificateImage?: string;
+  certificatePdf?: string;
+  isPendingFile?: boolean;
 }
 
 export interface EducationItem {
@@ -126,11 +138,11 @@ export interface PersonalInfo {
 }
 
 export interface StudioConfig {
-  accentColor: string; // Hex color code
-  theme: 'dark'; // The Digital Engineering Studio is dark graphite by specification
+  accentColor: string;
+  theme: 'dark';
   gridPattern: boolean;
   showDevPlaceholderNotice: boolean;
-  contactEndpoint?: string; // Optional Formspree / backend URL
+  contactEndpoint?: string;
 }
 
 export interface PortfolioData {
