@@ -29,20 +29,23 @@ export const portfolioData: PortfolioData = {
 
   // Personal Information
   personal: {
-    name: '[YOUR NAME]',
+    name: 'Bhuvan Chandra Reddy Neelapu',
     wordmark: 'STUDIO // DEV',
-    professionalTitle: '[YOUR PROFESSIONAL TITLE]',
+    professionalTitle: 'Full Stack Developer | Java Developer',
     tagline: 'Designing & Engineering High-Performance Scalable Software Systems',
     shortIntroduction:
-      '[YOUR SHORT INTRODUCTION — A concise 2-3 sentence overview of your technical focus, engineering philosophy, and what you build.]',
+      "Hi, I'm Bhuvan Chandra Reddy Neelapu, a Computer Science and Engineering student passionate about software development, problem-solving, and building practical applications.",
     aboutDescription: [
-      '[YOUR ABOUT PARAGRAPH 1 — Describe your background, how you got into software engineering, and your core technical philosophy.]',
-      '[YOUR ABOUT PARAGRAPH 2 — Detail your primary areas of interest, architectural patterns you enjoy working with, and the technologies you specialize in.]',
+      "Hi, I'm Bhuvan Chandra Reddy Neelapu, a Computer Science and Engineering student passionate about software development, problem-solving, and building practical applications.",
+      "I focus on Java, Spring Boot, React, TypeScript, PostgreSQL, and REST APIs, along with strengthening my Data Structures and Algorithms skills. I enjoy turning ideas into useful software solutions, learning new technologies, and improving my development skills through hands-on projects.",
+      "My goal is to contribute to meaningful software projects, collaborate with development teams, and build reliable, maintainable applications while continuously growing as a developer.",
     ],
     careerGoals:
-      '[YOUR CAREER GOALS — Summarize your future engineering aspirations, leadership interests, or domains you want to explore.]',
+      'Seeking software development opportunities where I can learn, contribute, and build reliable applications.',
     educationSummary:
-      '[YOUR EDUCATION SUMMARY — A brief one-liner regarding your highest degree or technical education.]',
+      'Computer Science and Engineering student',
+    professionalFocus:
+      'Full Stack Development | Java Development | Problem-Solving',
     photoPath: '/profile-placeholder.svg', // Replace with your photo path, e.g. '/profile.jpg'
     resumePath: '/resume.pdf', // Put your resume PDF in the public folder as 'resume.pdf'
     email: 'your.email@example.com',

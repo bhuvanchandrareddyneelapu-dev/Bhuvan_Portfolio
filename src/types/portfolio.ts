@@ -115,6 +115,7 @@ export interface PersonalInfo {
   aboutDescription: string[];
   careerGoals: string;
   educationSummary: string;
+  professionalFocus?: string;
   photoPath: string;
   resumePath: string;
   email: string;
